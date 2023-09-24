@@ -108,12 +108,16 @@ html {
 
 /* main */
 main {
-    max-width: 1000px;
     margin: 0 auto;
 }
 
 section {
     padding: 0 10px;
+}
+
+.max-width_1000{
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .section-logo {
@@ -128,6 +132,7 @@ section {
 }
 
 /* title */
+
 
 .title-wrap p {
     text-align: center;
@@ -153,7 +158,7 @@ section {
 /* about_us */
 .about_us-wrap {
     display: flex;
-    height: 560px;
+    align-items: center;
 }
 
 .about_us-left {
@@ -161,7 +166,6 @@ section {
 }
 
 .about_us-left img {
-    height: 100%;
     /* 画像の右下の角を丸くする */
     border-bottom-right-radius: 82px; 
 }
@@ -172,22 +176,15 @@ section {
     box-sizing: border-box;
 }
 
-.about_us-right h2 {
-    padding: 60px 0 50px 0;
-}
-
 .about_us1 {
     font-size: 44px;
     line-height: 1.39;
-    padding-bottom: 35px;
+    padding: 30px 0 25px 0 ;
 }
 
 .about_us2 {
     font-size: 16px;
-    line-height: 1.63;
-    padding-bottom: 40px;
-
-
+    line-height: 1.625;
 }
 
 /* menu */
@@ -211,8 +208,6 @@ section {
 }
 .menu-wrap div img {
     border-top-right-radius: 20px;
-    width: 300px;
-    height: 200px;
 }
 
 .menu1 {
@@ -221,6 +216,7 @@ section {
     padding-bottom: 10px;
     padding-left: 15px;
     margin-top: -20px;
+    font-weight: normal;
 
 }
 
@@ -241,6 +237,10 @@ section {
     margin-top: 20px;
 }
 
+.gallery-wrap img {
+    width: 100%;
+}
+
 /* event */
 
 #event {
@@ -248,11 +248,10 @@ section {
 }
 
 .event-box{
-    max-width: 1000px;
     border: solid;
     background: white;
     margin-top: 30px;
-    padding: 10px 0;
+    padding: 30px 0;
 }
 
 .event1 {
@@ -262,22 +261,18 @@ section {
 }
 
 .date {
-    padding: 0 50px 0 150px;
+    padding: 0 55px 0 155px;
 }
 
 .event-title {
     text-decoration: underline 1px;
 }
 
-/* access */
+/* access */                                            
 
 #access {
     padding: 0;
-    margin-top: 65px;
-}
-
-.access-map {
-    width: 100%;
+    margin-top: 65px
 }
 
 .access-map iframe {
@@ -294,8 +289,9 @@ footer {
 
 .footer-wrap {
     display: flex;
-    justify-content: center;
     padding-top: 75px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .footer-left {
@@ -332,7 +328,7 @@ footer {
     width: 125px;
     position: fixed;
     bottom: 20px ;
-    right:20px;
+    right: 20px;
 }
 
 
