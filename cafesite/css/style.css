@@ -62,7 +62,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 .header {
     position: relative;
 }
@@ -132,8 +131,6 @@ section {
 }
 
 /* title */
-
-
 .title-wrap p {
     text-align: center;
 }
@@ -185,6 +182,7 @@ section {
 .about_us2 {
     font-size: 16px;
     line-height: 1.625;
+    text-align: justify;
 }
 
 /* menu */
@@ -223,6 +221,7 @@ section {
 .menu2 {
     font-size: 17px;
     line-height: 1.24;
+    text-align: justify;
 }
 
 /* gallery */
@@ -242,6 +241,8 @@ section {
 .gallery-wrap img {
     width: 20%;
 }
+
+
 
 /* event */
 
@@ -307,8 +308,8 @@ footer {
 
 .footer-right {
     font-size: 20px;
-    
 }
+
 .footer-right p {
     padding-bottom: 20px;
     color: black;
@@ -333,5 +334,297 @@ footer {
     bottom: 20px ;
     right: 20px;
 }
+
+
+/* スマホ用の記述 */
+
+.hamburger,
+.open,
+.sp-nav,
+.sp-title3,
+.sp-section-logo,
+.sp-gallery img {
+    display: none;
+}
+
+
+
+@media screen and (max-width:1100px) {
+    /* ヘッダー箇所 */
+    .pc-nav {
+        display: none ;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+        /* ホバーしたら指マークに */
+        cursor: pointer; 
+        height: 33px;
+        z-index: 9999;
+    }
+
+    .hamburger span {
+        background: #fff;
+        width: 33px;
+        height: 3px;
+        display: block;
+        position: relative;
+        top: 10px;
+        transition: 0.3s;
+    }
+
+    .hamburger span::before,
+    .hamburger span::after {
+        content: '';
+        background: #fff;
+        width: 33px;
+        height: 3px;
+        display: block;
+        position: absolute;
+        transition: 0.3s;
+
+    }
+
+    .hamburger span::before {
+        top: 10px;
+    }
+
+    .hamburger span::after {
+        bottom: 10px;
+    }
+
+    .open span {
+        background: transparent;
+    } 
+
+    .open span::before {
+        top: 0px;
+        transform: rotate(45deg);
+    }
+
+    .open span::after {
+        bottom: 0px;
+        transform: rotate(135deg);
+    }
+
+    .sp-nav{
+        height: 100vh;
+        background: rgba(0,0,0,0.8);
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+
+    .sp-nav ul {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .sp-nav ul li {
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+        padding: 15px 0;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
+        "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    }
+
+
+    /* title */
+    .title1 {
+        font-size: 4.5vw;
+        padding: 40px 0 25px;
+    }
+
+    .title2 {
+        font-size: 10vw;
+        padding-bottom: 20px;
+    }
+
+    .title3 {
+        display: none;
+    }
+
+    .sp-title3 {
+        display: block;
+        line-height: 1.875;
+        padding-bottom: 55px;
+    }
+
+    .about_us1 {
+        font-size: 10vw;
+
+    }
+}     
+
+    @media screen and (max-width:767px) {
+
+    /* about_us */
+    section {
+        padding: 0;
+    }
+
+    .sp-section-logo {
+        display: block;
+        width: auto;
+        height: 60px;
+        margin: 0 auto 15px auto;
+    }
+
+    .about_us-wrap {
+        display: block;
+    }
+    
+    .about_us-left {
+        width: 100%;
+    }
+    
+    .about_us-left img {
+        /* 画像の右下の角を丸くする */
+        border-bottom-right-radius: 0%; 
+    }
+    
+    .about_us-right {
+        width: 100%;
+        padding-top: 5px;
+        padding-left: 20px;
+    }
+
+    .about_us2 {
+        padding-right: 20px;}
+
+
+
+    .about_us-right h2 img {
+        display: none;
+    }
+
+
+
+    /* sp-menu */
+    #menu {
+        margin-top: 40px;
+    }
+
+    .menu-wrap {
+        display: block;
+        padding: 0 37px;
+        margin-top: 20px;
+    }
+
+    .menu-wrap div {
+        padding-right: 0;
+    }
+
+    .menu-wrap div img {
+        width: 100%;
+    }
+
+    .menu1 {
+        font-size: 40px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        margin-top: -12px;  
+    }
+
+    .menu2 {
+        padding-bottom: 50px;
+    }
+
+    /* sp-gallery */
+    #gallery {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .gallery-wrap img {
+        display: none;
+    }
+
+    .sp-gallery img{
+        display: block;
+        width: 100%;
+    }
+
+    /* sp-event */
+    #event {
+        margin-top: 30px;
+    }
+
+    #event div{
+        margin-bottom: 20px;
+    }
+
+    .event-box {
+        margin: 0 20px;
+        padding: 10px 0;
+        
+    }
+    
+    .event1 a {
+        display: block;
+    }
+
+    .event1 a p {
+        padding-left: 25px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 16px;
+    }
+    
+    /* sp-access */
+    #access {
+        margin-top: 30px;
+    }
+
+    .access-map iframe {    
+        height: 100%;
+        margin-top: 10px;
+    }
+
+    /* sp-footer */
+    .footer-wrap {
+        display: block;
+        padding-left: 20px;
+        padding-top: 0px;
+ 
+    }          
+    
+    .footer-right {
+        font-size: 18px;
+    }
+
+    .footer-right p {
+        padding-bottom: 10px;
+    }
+
+    .footer-logo {
+        padding-top: 45px;
+        padding-bottom: 30px;
+    }
+
+    .footer-copy {
+        padding: 45px 0 30px;
+    }
+
+    .to_top img {
+        width: 100px;
+        position: fixed;
+        bottom: 200px ;
+        right: 10px;
+    }
+}
+
+
+
 
 
