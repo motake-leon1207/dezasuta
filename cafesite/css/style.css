@@ -247,13 +247,54 @@ section {
 }
 
 .gallery-wrap {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    position: relative;
 }
 
-.gallery-wrap img {
-    width: 20%;
+
+
+
+
+.arrow1,
+.arrow2,
+.arrow3,
+.arrow4 {
+    background: #fff;
+    width: 30px;
+    height: 5px;
+    display: block;
+    position: relative;
+}
+
+.arrow-left span {
+    /* left: 300px; */
+    /* ホバーしたら指マークに */
+    cursor: pointer; 
+}
+
+.arrow1 {
+    rotate: 315deg;
+    top: 0px;
+}
+
+.arrow2 {
+    rotate: 225deg;
+    /* top: -104px; */
+}   
+
+.arrow-right span {
+    /* right: 300px; */
+    /* ホバーしたら指マークに */
+    cursor: pointer; 
+}
+
+.arrow3 {
+    rotate: 45deg ;
+    /* top: -117px; */
+}
+
+.arrow4 {
+    rotate: 135deg ;
+    /* top: -104px; */
 }
 
 
@@ -393,7 +434,7 @@ footer {
         transition: 0.3s;
     }
 
-    .hamburger span::before,
+    .hamburger ::before,
     .hamburger span::after {
         content: '';
         background: #fff;
@@ -468,7 +509,7 @@ footer {
 
     /* ヘッダー箇所 */
     .logo {
-        width: 50%
+        width: 187.51px;
     }
 
     /* タイトル箇所 */
@@ -503,7 +544,7 @@ footer {
     .sp-section-logo {
         display: block;
         width: auto;
-        height: 60px;
+        height: 45.5px;
         margin: 0 auto 15px auto;
     }
 
